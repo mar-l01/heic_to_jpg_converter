@@ -6,8 +6,8 @@ from tqdm import tqdm
 from pillow_heif import register_heif_opener
 register_heif_opener()
 
-HEIC_DIRECTORY = Path("<input directory>")
-JPG_DIRECTORY = Path("<output directory>")
+HEIC_DIRECTORY = Path("fotos")
+JPG_DIRECTORY = Path("fotos/jpg")
 
 for image_file in tqdm(HEIC_DIRECTORY.glob("*.HEIC")):
     heic_image = Image.open(image_file)
